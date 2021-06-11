@@ -1,0 +1,17 @@
+using System;
+using System.Globalization;
+
+namespace ConsoleApp8 {
+    class Program {
+        static void Main(string[] args) {
+            
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double desconto = (preco < 20) ? preco * 0.1 : preco * 0.05;            
+            //Expressão condicional ternária substitui o if else;
+            //Lê-se: se (preco < 20) for verdadeiro, desconto recebe o valor de (preco*0.1), senão recebe o valor de (preco*0.05);
+
+            Console.WriteLine(desconto);
+        }
+    }
+}
